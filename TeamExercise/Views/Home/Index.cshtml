@@ -1,0 +1,120 @@
+﻿<style>
+    div {
+        min-height: 32px;
+        font-size: 16px;
+    }
+</style>
+<h1>1. Bootstrap Grid System practice</h1>
+<div class="container" style="min-height:500px">
+    <div class="row">
+        <h2 class="col-md-12">col的基本應用，一個row包含12個col</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3" style="background-color:lightblue">col-md-2</div>
+        <div class="col-md-3" style="background-color:lightgray">col-md-2</div>
+        <div class="col-md-3" style="background-color:lightgreen">col-md-2</div>
+        <div class="col-md-3" style="background-color:lightblue">col-md-2</div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <h2 class="col-md-12">col offSet的應用。<small>col-md-offset-* :將column向右移動</small></h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="background-color:lightblue">col-md-4</div>
+        <div class="col-md-4 col-md-offset-4" style="background-color:lightgreen">col-md-4 col-md-offset-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="background-color:lightblue">col-md-4</div>
+        <div class="col-md-6 col-md-offset-2" style="background-color:lightgreen">col-md-2 col-md-offset-6</div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <h2 class="col-md-12">col pull, push的應用。(可試著縮小顯示範圍看效果)</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-md-push-7"><img src="https://sdl-stickershop.line.naver.jp/products/0/0/1//1017728/LINEStorePC/main.png" style="width:400px;" /></div>
+        <div class="col-md-7 col-md-pull-5"><p>col-md-7 col-md-pull-5(我是第二個div)</p></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <h2 class="col-md-12">col 各種裝置混合使用(可透過調整顯示範圍觀看效果)</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8" style="background-color:lightpink">col-xs-12 col-sm-6 col-md-8</div>
+        <div class="col-xs-6 col-md-4" style="background-color:lightgreen">.col-xs-6 .col-md-4</div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-6 col-sm-4" style="background-color:lightpink">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4" style="background-color:lightgreen">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4" style="background-color:lightpink">.col-xs-6 .col-md-4</div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-6 col-sm-4" style="background-color:lightpink">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4" style="background-color:lightblue">.col-xs-6 .col-sm-4</div>
+        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+        @*<div class="clearfix visible-xs-block"></div>*@
+        <div class="col-xs-6 col-sm-4" style="background-color:lightpink">.col-xs-6 .col-sm-4</div>
+    </div>
+</div>
+
+<hr />
+<br />
+<h1>2. Bootstrap Typography practice</h1>
+<div>
+    <h2 style="background-color:lightblue">基本標題展示(搭配small tag)</h2>
+    <h1>H1 tag 字體大小 36px<small>small tag</small></h1>
+    <h2>H2 tag 字體大小 30px<small>small tag</small></h2>
+    <h3>H3 tag 字體大小 24px<small>small tag</small></h3>
+    <h4>H4 tag 字體大小 18px<small>small tag</small></h4>
+    <h5>H5 tag 字體大小 14px<small>small tag</small></h5>
+    <h6>H6 tag 字體大小 12px<small>small tag</small></h6>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>Bootstrap對字形(body部分)的預設格式</h2></div>
+<ul>
+    <li>預設字體大小為14px</li>
+    <li>預設行寬(line-height)為1.48</li>
+</ul>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>用p tag， 但希望可以凸顯文字 -使用.lead</h2></div>
+<div>
+    <p>原：</p>
+    <p>我絕對不會說Bernice大大的生日在8月過後</p>
+    <br />
+    <p>加lead class</p>
+    <p class="lead">我絕對不會說Bernice大大的生日在8月過後</p>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>常見的字型處理</h2></div>
+<div>
+    <p class="lead"><mark>Marked</mark> || <del>Deleted</del> || <s>Strikethrough</s> || <ins>Inserted</ins></p>
+    <p class="lead"><u>Underlined</u> || <small>Small</small> || <strong>Blod</strong> || <em>Italics</em></p>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>文字對齊方式-使用.text-*</h2></div>
+<div>
+    <p class="text-left">Left aligned text.</p>
+    <p class="text-center">Center aligned text.</p>
+    <p class="text-right">Right aligned text.</p>
+    <p class="text-justify">Justified text.</p>
+    <p class="text-nowrap">No wrap text.</p>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>Transformation class</h2></div>
+<div>
+    <p>原文：we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
+    <p class="text-c">we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
+</div>
