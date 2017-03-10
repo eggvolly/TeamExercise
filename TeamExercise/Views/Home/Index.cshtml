@@ -4,7 +4,7 @@
         font-size: 16px;
     }
 </style>
-<h1>1. Bootstrap Grid System practice</h1>
+<h1 id="gridsystem">1. Bootstrap Grid System practice</h1>
 <div class="container" style="min-height:500px">
     <div class="row">
         <h2 class="col-md-12">col的基本應用，一個row包含12個col</h2>
@@ -67,7 +67,7 @@
 
 <hr />
 <br />
-<h1>2. Bootstrap Typography practice</h1>
+<h1 id="typography">2. Bootstrap Typography practice</h1>
 <div>
     <h2 style="background-color:lightblue">基本標題展示(搭配small tag)</h2>
     <h1>H1 tag 字體大小 36px<small>small tag</small></h1>
@@ -113,10 +113,125 @@
 </div>
 <br />
 <br />
-<div style="background-color:lightblue"><h2>Transformation class</h2></div>
+<div style="background-color:lightblue"><h2>Transformation class(需更新bootstrap版本)</h2></div>
 <div>
-    <p>原文：we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
-    <p class="text-lowercase">we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
-    <p class="text-uppercase">we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
-    <p class="text-capitalize">we create world-class mobile and web apps for enterprises, and help drive business success at leading organizations. for capital word</p>
+    <p>原文：We create world-class mobile and web apps for enterprises, and help drive business success at leading organizations.</p>
+    <p class="text-lowercase">We create world-class mobile and web apps for enterprises, and help drive business success at leading organizations.</p>
+    <p class="text-uppercase">We create world-class mobile and web apps for enterprises, and help drive business success at leading organizations.</p>
+    <p class="text-capitalize">We create world-class mobile and web apps for enterprises, and help drive business success at leading organizations.</p>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>縮寫(Abbreviations)</h2></div>
+<div>
+    <p>基本款：An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+    <p>小一點的font-size:<abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread</p>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>地址<small>根據不同資訊使用不同的tag展現其風格，並在結尾加上br tag以保留格式</small></h2></div>
+<div>
+    <address>
+        <strong>Twitter, Inc.</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+    </address>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>預設引用(Blockquote options, 需更新bootstrap)</h2></div>
+<div>
+    <p><small>加入footer，將資料來源標籤用cite1包住</small></p>
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+    <br />
+    <blockquote class="blockquote-reverse">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+</div>
+<br />
+<br />
+<div style="background-color:lightblue"><h2>清單</h2></div>
+<div>
+    <p style="background-color:lightgray">無排序性</p>
+    <ul>
+        <li>第一項</li>
+        <li>第二項</li>
+        <li>第三項</li>
+        <li>第四項
+            <ul>               
+                <li>4-1</li>
+                <li>4-2</li>
+                <li>4-3</li>
+            </ul>
+        </li>
+        <li>第五項</li>
+    </ul>
+    <p style="background-color:lightgray">有排序性</p>
+    <ol>
+        <li>第一項</li>
+        <li>第二項</li>
+        <li>第三項</li>
+        <li>
+            第四項
+            <ol>
+                <li>4-1</li>
+                <li>4-2</li>
+                <li>4-3</li>
+            </ol>
+        </li>
+        <li>第五項</li>
+    </ol>
+    <p style="background-color:lightgray">清除預設的清單格式-使用.list-unstyled</p>
+    <ul class="list-unstyled">
+        <li>第一項</li>
+        <li>第二項</li>
+        <li>第三項</li>
+        <li>
+            第四項
+            <ul>
+                <li>4-1</li>
+                <li>4-2</li>
+                <li>4-3</li>
+            </ul>
+        </li>
+        <li>第五項</li>
+    </ul>
+    <p style="background-color:lightgray">並排清單，使用list-inline</p>
+    <ul class="list-inline">
+        <li>第一項</li>
+        <li>第二項</li>
+        <li>第三項</li>
+        <li>
+            第四項
+            <ul>
+                <li>4-1</li>
+                <li>4-2</li>
+                <li>4-3</li>
+            </ul>
+        </li>
+        <li>第五項</li>
+    </ul>
+    <p style="background-color:lightgray">項目+敘述 使用dl, dt, dd的tag</p>
+    <dl>
+        <dt>第一項</dt>
+        <dd>我是第一項</dd>
+        <dt>第二項</dt>
+        <dd>我是第二項</dd>
+    </dl>
+    <p style="background-color:lightgray">項目+敘述 使用dl, dt, dd的tag(水平版)</p>
+    <dl>
+        <dt>第一項</dt>
+        <dd>我是第一項</dd>
+        <dt>第二項</dt>
+        <dd>我是第二項</dd>
+    </dl>
 </div>
