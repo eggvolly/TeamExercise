@@ -1,7 +1,564 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<div id="codeintro" class="container">
+    <h1>1. Code<small>其實就是另類的mark</small></h1>
+    <br />
+    <div style="background-color:lightblue"><h3>文字內要加入程式碼，使用code tag包住</h3></div>
+    <div><p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p></div>
 
-<p>Use this area to provide additional information.</p>
+    <div style="background-color:lightblue"><h3>提示使用者是要按鍵盤的字樣</h3></div>
+    <div><p>按下<kbd>enter</kbd>後繼續執行</p></div>
+
+    <div style="background-color:lightblue"><h3>多段程式碼(!?)</h3></div>
+    <div><p>請看下列程式碼：<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre></p></div>
+
+    <div style="background-color:lightblue"><h3>使用變數(方程式,var tag)</h3></div>
+    <div><p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p></div>
+
+    <div style="background-color:lightblue"><h3>舉例時使用(!? 但效果不太明顯)</h3></div>
+    <div><p>Bernice大大超暴力，像是<samp>他打人超痛</samp></p></div>
+
+    <hr />
+</div>
+<div class="container" id="tableintro">
+    <h1>2. Tables</h1>
+    <br />
+    <div style="background-color:lightblue"><h3>基本範例</h3></div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>條紋式的row</h3></div>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>有框限row</h3></div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>有hover效果的row</h3></div>
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>密集的row</h3></div>
+    <div>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>特殊編排的row</h3></div>
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th><code>編號</code></th>
+                    <th><kbd>姓名</kbd></th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr class="danger">
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td class="success">3</td>
+                    <td class="info">Ray</td>
+                    <td class="warning">M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color:lightblue"><h3>自適應表格(可調整顯示畫面觀察效果)</h3></div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                    <td>1</td>
+                    <td>Morris</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                    <td>2</td>
+                    <td>Bernice</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                    <td>3</td>
+                    <td>Ray</td>
+                    <td>M</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="formintro" class="container">
+    <h1>3. Forms</h1>
+    <br />
+    <div style="background-color:lightblue"><h3>基本範例</h3></div>
+    <div>
+        <blockquote><p>文章上提醒：不要將form群組與input群組混用<small>但我看不懂QQ</small></p></blockquote>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+    <div style="background-color:lightblue"><h3>並行的表單</h3></div>
+    <div>
+        <blockquote style="border-left-color:red">
+            <ol>
+                <li>需要自訂寬度(.form-inline 預設寬度為auto)</li>
+                <li>雖然看不到label但建議要加</li>
+            </ol>
+        </blockquote>
+    </div>
+    <div style="margin-bottom:15px;">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <div class="input-group">
+                    <label class="sr-only" for="exampleInputEmail2">電子郵件</label>
+                    <div class="input-group-addon"></div>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="輸入電子郵件">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputPassword2">密碼</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="密碼">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 記住我
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">登入</button>
+        </form>
+    </div>
+    <div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Transfer cash</button>
+        </form>
+    </div>
+
+    <div style="background-color:lightblue">
+        <h3>水平布局表單(Horizontal form)</h3>
+    </div>
+    <div>
+        <p>透過.form-horizontal類別並使用bootstrap的格線系統，可將<code>label</code>和form控制項進行水平布局，會自動以格線的row來呈現，不需要額外加row的類別</p>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div style="background-color:lightblue"><h3>Form支援的控制項(.form-control)</h3></div>
+    <ul class="list-inline">
+        <li><code>text</code></li>
+        <li><code>password</code></li>
+        <li><code>datetime</code></li>
+        <li><code>datetime-local</code></li>
+        <li><code>date</code></li>
+        <li><code>month</code></li>
+        <li><code>time</code></li>
+        <li><code>week</code></li>
+        <li><code>number</code></li>
+        <li><code>email</code></li>
+        <li><code>url</code></li>
+        <li><code>search</code></li>
+        <li><code>tel</code></li>
+        <li><code>color</code></li>
+    </ul>
+    <blockquote><p>textarea 可利用row屬性增加input行數</p></blockquote>
+    <div>
+        <textarea class="form-control" rows="3" placeholder="文字編輯區"></textarea>
+    </div>
+    <blockquote>
+        <p>
+            checkbox 或 radio 如設置了 <code>disabled</code> 屬性都能被賦予合適的樣式。如果 checkbox 或 radio 與 <code>&lt;label&gt;</code> 一起使用並且希望當滑鼠移入時一併顯示"不允許"的圖示，將 <code>.disabled</code> 類別加至 <code>.radio</code>、<code>.radio-inline</code>、<code>.checkbox</code>、<code>.checkbox-inline</code> 類別處，或是加至 <code>&lt;fieldset&gt;</code> 元素。
+        </p>
+    </blockquote>
+    <div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="checkbox disabled">
+            <label>
+                <input type="checkbox" value="" disabled>
+                Option two is disabled
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="radio disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                Option three is disabled
+            </label>
+        </div>
+    </div>
+    <blockquote>
+        <p>
+            下拉式選單樣式範例
+        </p>
+    </blockquote>
+    <div>
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <select multiple class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div style="background-color:lightblue"><h3>靜態控制<small>使用.form-control-static</small></h3></div>
+    <div>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">email@example.com(form-control-static)</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div style="background-color:lightblue"><h3>焦點狀態</h3></div>
+    <div>
+        <blockquote>
+            <p>
+                會刪除某些預設的樣式，然後在<code>:focus</code>後面賦予<code>box-shadow</code>
+            </p>
+        </blockquote>
+    </div>
+
+    <div style="background-color:lightblue"><h3>禁用/唯獨狀態</h3></div>
+    <div>
+        <blockquote>
+            <p>
+                使用disabled去進行控制，原件上會顯示禁止圖示。<br />
+                使用readonly，讓物件變成唯獨狀態。
+            </p>
+        </blockquote>
+    </div>
+
+    <div style="background-color:lightblue"><h3>驗證狀態</h3></div>
+    <div>
+        <blockquote>
+            <p>
+                Bootstrap有內建幾種提供驗證回應的訊息樣式。
+            </p>
+        </blockquote>
+        <div class="form-group has-success">
+            <label class="control-label" for="inputSuccess1">Input with success</label>
+            <input type="text" class="form-control" id="inputSuccess1">
+        </div>
+        <div class="form-group has-warning">
+            <label class="control-label" for="inputWarning1">Input with warning</label>
+            <input type="text" class="form-control" id="inputWarning1">
+        </div>
+        <div class="form-group has-error">
+            <label class="control-label" for="inputError1">Input with error</label>
+            <input type="text" class="form-control" id="inputError1">
+        </div>
+        <div class="has-success">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxSuccess" value="option1">
+                    Checkbox with success
+                </label>
+            </div>
+        </div>
+        <div class="has-warning">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxWarning" value="option1">
+                    Checkbox with warning
+                </label>
+            </div>
+        </div>
+        <div class="has-error">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxError" value="option1">
+                    Checkbox with error
+                </label>
+            </div>
+        </div>
+        <blockquote>
+            <p>利用has-feedback，搭配對應的glyphicon圖示<br />此處測試的時候發現site.css有設定max-width屬性，會影響圖片顯示的位置</p>
+        </blockquote>
+        <form style="width:700px">
+            <div class="form-group has-success has-feedback">
+                <label class="control-label" for="inputSuccess2">Input with success</label>
+                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label class="control-label" for="inputWarning2">Input with warning</label>
+                <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+                <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+                <span id="inputWarning2Status" class="sr-only">(warning)</span>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label class="control-label" for="inputError2">Input with error</label>
+                <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                <span id="inputError2Status" class="sr-only">(error)</span>
+            </div>
+        </form>       
+    </div>
+    <div>
+        <blockquote style="border-left-color:lightpink">
+            <p>
+                此篇有部分地方提到aria-*的屬性<br />
+                此屬性通常是用來告知<strong>顯示幕</strong>該元件的用途
+            </p>
+        </blockquote>
+    </div>
+    <div>
+        <label class="sr-only" for="inputHelpBlock">Input with help text(詳情請看原始碼)</label>
+        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+        ...
+        <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+    </div>
+</div>
