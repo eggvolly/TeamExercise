@@ -38,5 +38,10 @@ namespace TeamExercise.Controllers
             System.Threading.Thread.Sleep(4000);
             return Content("This msg is from HomeController");
         }
+
+        public ActionResult AffixTest()
+        {
+            return View();
+        }
     }
 }

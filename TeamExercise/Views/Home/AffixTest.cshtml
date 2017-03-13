@@ -1,0 +1,54 @@
+﻿
+<style>
+    .active{
+        font-size:20px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row" id="firstpic">
+                <img class="col-md-12 img-responsive" src="~/images/IMG_0392.jpg" />
+            </div>
+            <div class="row" id="secondpic">
+                <img class="col-md-12 img-responsive" src="~/images/IMG_0432.jpg" />
+            </div>
+            <div class="row" id="thridpic">
+                <img class="col-md-12 img-responsive" src="~/images/POSG2890.jpg" />
+            </div>
+            <div class="row" id="description">
+                <strong>Notice</strong>
+                <ol>
+                    <li>透過加入<code>data-spy="affix"</code>，會調整此div是浮動或是固定在某個位置</li>
+                    <li><code>data-offset-*</code>代表是螢幕移動超過指定位置後，會將附加屬性變成浮動的區塊顯示在對應位置</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div data-spy="affix" id="affixtest" data-offset-top="60" data-offset-bottom="200" class="bg-info">
+                <ul>
+                    <li><a href="#firstpic"><strong>第一張圖片</strong></a></li>
+                    <li><a href="#secondpic"><strong>第二張圖片</strong></a></li>
+                    <li><a href="#thridpic"><strong>第三張圖片</strong></a></li>
+                    <li><a href="#description"><strong>操作測試</strong></a></li>
+                </ul>          
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        //$('#affixtest').on('affix.bs.affix', function () {
+        //    alert("該元素完成affix設置前會被觸發~");
+        //});
+
+        //$('#affixtest').on('affixed.bs.affix', function () {
+        //    alert("該元素完成affix設置後會被觸發~");
+        //});
+
+    })
+</script>
