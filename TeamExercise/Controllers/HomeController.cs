@@ -26,5 +26,17 @@ namespace TeamExercise.Controllers
 
             return View();
         }
+
+
+        public ActionResult BootstrapJsTest()
+        {
+            return View();
+        }
+
+        public ContentResult GetText()
+        {
+            System.Threading.Thread.Sleep(4000);
+            return Content("This msg is from HomeController");
+        }
     }
 }

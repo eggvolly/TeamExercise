@@ -1,0 +1,500 @@
+﻿
+@{
+    ViewBag.Title = "BootstrapJsTest";
+}
+
+<style>
+    .active{
+        background-color:black;
+        font-size:16px;
+        color:white
+    }
+</style>
+
+
+<div class="container">
+    <div><h1>Alert.js</h1></div>
+    <br />
+    <div class="bg-success row" style="margin-bottom:15px;">
+        <h3 class="col-md-12">基本範例</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12 alert alert-warning alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>測試</strong>Prime Minister Lars Lokke Rasmussen said he was concerned that "democratic principles are under great pressure" in Turkey.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <strong>監聽事件</strong>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width:10%">事件</th>
+                        <th style="width:90%">說明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            close.bs.alert
+                        </td>
+                        <td>
+                            當<code>close</code>執行個體方法被呼叫時觸發。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            closed.bs.alert
+                        </td>
+                        <td>
+                            當警告訊息已經在使用者面前關閉完成（且 CSS 轉場效果已經完成），此事件會被觸發。
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="row">
+        <blockquote class="col-md-12 bg-warning">
+            <ul>
+                <li>在關閉紐上加入data-dismiss="alert"、對應的外層div加入.alert即可</li>
+                <li>此關閉功能會將整個元素移除</li>
+                <li>透過加入<code>.fade</code>跟<code>.in</code>才會有動畫效果</li>
+            </ul>
+        </blockquote>
+    </div>
+    <br />
+</div>
+<hr />
+<div class="container">
+    <div><h1>Button.js</h1></div>
+    <br />
+    <div class="bg-success row">
+        <h3 class="col-md-12">基本範例</h3>
+    </div>
+    <div class="row" style="margin-bottom:15px;">
+        <button type="button" class="btn btn-primary" id="testbtn" data-loading-text="loading..." autocomplete="off">
+            Testing!
+        </button>
+        <label id="backtest">waiting for controller</label>
+    </div>
+    <div class="row">
+        <blockquote class="bg-info" style="border-left-color:deepskyblue">
+            <ol>
+                <li>在button上加入data-loading-text="等待時的文字"</li>
+                <li>綁定click事件，透過$().button('loading')讓按鈕變成disable且文字置換成等待時文字</li>
+                <li>按鈕事件結束後，透過$().button('reset')的方式讓按鈕恢復</li>
+            </ol>
+        </blockquote>
+    </div>
+    <br />
+    <div class="bg-success row" style="margin-bottom:10px">
+        <h3 class="col-md-12">單一切換(toggle)</h3>
+    </div>
+    <div class="row" style="margin-bottom:10px">
+        <button type="button" id="togglebtn" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Single toggle
+        </button>
+    </div>
+    <div>
+        <strong>測試紀錄：</strong>
+        <ol>
+            <li>
+                使用bootstrap的button class，背景顏色無法做改變(被覆蓋掉)
+            </li>
+            <li>
+                文字還沒想到方法去變更
+            </li>
+            <li>
+                根據官網的說法，此種設計可以拿來做類似開關的switch
+            </li>
+            <li>
+                autocomplete:FireFox跨頁時保持禁用狀態，變通方法是在button加入autocomplete=false
+            </li>
+        </ol>
+    </div>
+    <br />
+    <div class="bg-success row" style="margin-bottom:10px">
+        <h3 class="col-md-12">check box</h3>
+    </div>
+    <div class="row">
+        <strong class="col-md-12">CheckBox</strong>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off"> Checkbox 2
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off"> Checkbox 3
+            </label>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:15px">
+        <strong class="col-md-12">Radio</strong>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+            </label>
+        </div>
+    </div>
+    <div class="row bg-success">
+        <h3 class="col-md-12">方法</h3>
+    </div>
+    <div class="row">
+        <table class="col-md-12 table table-hover">
+            <thead>
+                <tr>
+                    <th style="width:10%">事件</th>
+                    <th style="width:90%">說明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        $().button('toggle')
+                    </td>
+                    <td>
+                        切換按下的狀態。賦予按鈕啟動時應有的外觀樣式。
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        $().button('reset')
+                    </td>
+                    <td>
+                        重新設置按鈕狀態，會還原按鈕文字。
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        $().button('string')
+                    </td>
+                    <td>
+                        這會將按鈕文字更改為<code>data-</code>定義的文字。
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row"><h1 class="col-md-12">Collapse.js(摺疊效果)</h1></div>
+    <br />
+    <div class="row bg-success"><h3 class="col-md-12">手風琴樣式範例</h3></div>
+    <div class="row">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <strong class="col-md-12">Notice:</strong>
+    </div>
+    <div class="row">
+        <ol class="col-md-12">
+            <li>預設展開的內容在那份內容(panel-body)的上一層加入<code>.in</code>(希望預設全部都隱藏內容則全部都不要加此class)</li>
+            <li>在標題<code>a</code>的tag中，href屬性設定為對應的body上一層之id，即可針對此內容作展開(加入<code>.in</code>的動作)</li>
+            <li>在標題a tag中，加入<code>data-parent</code>才能有自動收闔之效果</li>
+            <li><code>aria-expanded</code>也是用來定義輔助技術的功用</li>
+        </ol>
+    </div>
+    <br />
+    <div class="row bg-success">
+        <h3 class="col-md-12">手動開啟摺疊效果</h3>
+    </div>
+    <div class="row">
+        <table class="table table-hover col-md-12">
+            <thead>
+                <tr>
+                    <th width="20%">方法</th>
+                    <th width="80%">功能</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$().collapse('toggle')</td>
+                    <td>切換可折疊元素顯示或隱藏</td>
+                </tr>
+                <tr>
+                    <td>$().collapse('show')</td>
+                    <td>顯示可折疊元素</td>
+                </tr>
+                <tr>
+                    <td>$().collapse('hide')</td>
+                    <td>隱藏可折疊元素</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row panel-group" id="togglepanel">
+        <div id="sample" class="col-md-12 panel" style="background-color:lightgray">
+            <div class="panel-heading">
+                <a onclick="ToggleSample()" data-parent="#togglepanel" style="cursor:pointer">範例Title</a>
+            </div>
+            <div id="samplebody" class="panel-body">
+                <p>勞基法修正案日前正式上路，原意為改善勞工就業環境，包含提高休息日加班費、增加資淺員工特休假等措施，立意良好，卻在缺乏配套措施下就倉促上路，引爆全台萬物齊漲，增加民生負擔，甚至造成假日生病，卻找不到醫生看診的失控局面。</p><br />
+                <p>「現在菜價便宜，外食卻一直漲，水餃、鍋貼、魯肉飯齊漲，麥當勞和肯德基也漲，連診所掛號費都貴了50元，聽說春節後客運也要漲，算一算，荷包真的大縮水。」王太太連珠炮的說。</p><br />
+                <p>王太太抱怨的漲價亂象，癥結點就在元旦上路的「一例一休」，對勞力密集產業衝擊相當大，往後雇主若在「例假日」要求員工上班，需支付當日雙倍薪水做為加班費，還得另外補假；「休息日」加班雖不用補假，最高得支付1.67倍薪資當加班費。</p>
+            </div>
+        </div>
+        <div id="sample" class="col-md-12 panel"  style="background-color:lightgray">
+            <div class="panel-heading" >
+                <a onclick="ToggleSample2()" data-parent="#togglepanel" style="cursor:pointer">範例Title</a>
+            </div>
+            <div id="samplebody2" class="panel-body">
+                <p>勞基法修正案日前正式上路，原意為改善勞工就業環境，包含提高休息日加班費、增加資淺員工特休假等措施，立意良好，卻在缺乏配套措施下就倉促上路，引爆全台萬物齊漲，增加民生負擔，甚至造成假日生病，卻找不到醫生看診的失控局面。</p><br />
+                <p>「現在菜價便宜，外食卻一直漲，水餃、鍋貼、魯肉飯齊漲，麥當勞和肯德基也漲，連診所掛號費都貴了50元，聽說春節後客運也要漲，算一算，荷包真的大縮水。」王太太連珠炮的說。</p><br />
+                <p>王太太抱怨的漲價亂象，癥結點就在元旦上路的「一例一休」，對勞力密集產業衝擊相當大，往後雇主若在「例假日」要求員工上班，需支付當日雙倍薪水做為加班費，還得另外補假；「休息日」加班雖不用補假，最高得支付1.67倍薪資當加班費。</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row bg-success">
+        <h3>事件</h3>
+    </div>
+    <div class="row">
+        <table class="col-md-12 table table-hover">
+            <thead>
+                <tr>
+                    <th>事件</th>
+                    <th>說明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>show.bs.collapse</td>
+                    <td>當Show執行個體被呼叫時觸發。</td>
+                </tr>
+                <tr>
+                    <td>shown.bs.collapse</td>
+                    <td>摺疊效果已在使用者面前展示完成後觸發。</td>
+                </tr>
+                <tr>
+                    <td>hide.bs.collapse</td>
+                    <td>當hide執行個體被呼叫時觸發。</td>
+                </tr>
+                <tr>
+                    <td>hidden.bs.collapse</td>
+                    <td>摺疊效果已在使用者面前展示完成後觸發。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <h1>Carousel.js(輪播效果)</h1>
+    </div>
+    <br />
+    <div class="row bg-success">
+        <h3>範例</h3>
+    </div>
+    <div class="row">
+        <div id="carousel-example-generic" class="carousel slide" data-interval="1000" data-ride="carousel" style="margin-bottom:10px">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/images/POSG2890.jpg" alt="...">
+                    <div class="carousel-caption">
+                        蛋黃哥展覽
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/images/IMG_0392.jpg" alt="...">
+                    <div class="carousel-caption">
+                        Pizza Hot
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/images/IMG_0432.jpg" alt="...">
+                    <div class="carousel-caption">
+                        好初早餐
+                    </div>
+                </div>
+                圖片欣賞
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <button id="cycleplay" type="button" class="btn btn-success">循環播放</button>
+        <button id="pauseplay" type="button" class="btn btn-success">暫停播放</button>
+        <button id="threepic" type="button" class="btn btn-success">跳至第三張圖</button>
+    </div>
+    <br />
+    <div class="row bg-success">
+        <h3 class="col-md-12">方法/事件</h3>
+    </div>
+    <div class="row">
+        <table class="col-md-12 table table-hover">
+            <thead>
+                <tr>
+                    <th>方法/事件</th>
+                    <th>說明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$().carousel('cycle')</td>
+                    <td>左向右循環撥放。</td>
+                </tr>
+                <tr>
+                    <td>$().carousel('pause')</td>
+                    <td>停止循環播放</td>
+                </tr>
+                <tr>
+                    <td>$().carousel(number)</td>
+                    <td>循環播放至指定位置(類似陣列的概念)。</td>
+                </tr>
+                <tr>
+                    <td>$().carousel('prev')</td>
+                    <td>回到上一個畫面。</td>
+                </tr>
+                <tr>
+                    <td>$().carousel('next')</td>
+                    <td>回到下一個畫面。</td>
+                </tr>
+                <tr>
+                    <td>slide.bs.carousel</td>
+                    <td>準備執行slide時觸發。</td>
+                </tr>
+                <tr>
+                    <td>slid.bs.carousel</td>
+                    <td>準備slide完成後觸發。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+<script src="/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#testbtn').on('click', function () {
+            var $btn = $(this).button('loading');
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetText","Home")',
+                success: function (result) {
+                    $('#backtest').text(result);
+                    $btn.button('reset');
+                }
+            });
+        })
+        $('#samplebody').collapse('hide');
+        $('#samplebody2').collapse('hide');
+
+        $('#samplebody').on('show.bs.collapse', function () {
+            alert("準備開始show的動作")
+        });
+
+        $('#samplebody').on('shown.bs.collapse', function () {
+            alert("show的動作已經結束。")
+        });
+
+        $('#samplebody').on('hide.bs.collapse', function () {
+            alert("準備開始hide的動作")
+        });
+
+        $('#samplebody').on('hidden.bs.collapse', function () {
+            alert("hidden的動作已經結束。")
+        });
+
+        $('#cycleplay').on('click', function () {
+            $('#carousel-example-generic').carousel('cycle',  interval= 300);
+        });
+
+        $('#pauseplay').on('click', function () {
+            $('#carousel-example-generic').carousel('pause');
+        });
+
+        $('#threepic').on('click', function () {
+            $('#carousel-example-generic').carousel(2);
+        });
+
+    });
+    function ToggleSample() {
+        $('#samplebody').collapse('toggle');
+    };
+    function ToggleSample2() {
+        $('#samplebody2').collapse('toggle');
+    }
+</script>
